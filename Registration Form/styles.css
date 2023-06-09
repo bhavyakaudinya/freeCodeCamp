@@ -19,6 +19,7 @@ form{
     max-width: 500px;
     min-width: 300px;
     width: 60vw;
+    padding-bottom: 2em;
 }
 
 fieldset{
@@ -27,7 +28,53 @@ fieldset{
     padding-bottom: 2rem;
     padding-left: 0;
     padding-right: 0;
+    border-bottom: 3px solid #3b3b4f;
 }
+
+/* 👇🏻 this will select the last fieldset element */
+fieldset:last-of-type{
+    border-bottom: none;
+}
+
+input, textarea, select{
+    width: 100%; /* this is used to make element take up the full width of their parents elements */
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 2em;
+}
+
+.inline{
+    width: unset;
+    margin-right: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    vertical-align: middle; /* used only to combat if the elements are too high */
+}
+
+input, textarea{
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+}
+
+input[type="submit"]{
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+}
+
+input[type="file"]{
+    padding: 1px 2px 2px 1px;
+}
+
 
 label{
     display: block;
