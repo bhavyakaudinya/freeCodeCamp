@@ -37,11 +37,11 @@
               required
           /></label>
 
-          <label for="age" id="number-label">
+          <label for="number" id="number-label">
             Age (optional)
             <input
               type="number"
-              id="age"
+              id="number"
               name="age"
               min="11"
               max="90"
@@ -63,9 +63,9 @@
 
           <label id="radio-label">
             Would you recommend freeCodeCamp to a friend?
-            <input type="radio" name="radio" /> Definately
-            <input type="radio" name="radio" /> Maybe
-            <input type="radio" name="radio" /> Not Sure
+            <input type="radio" name="radio" value="1" /> Definately
+            <input type="radio" name="radio" value="2"/> Maybe
+            <input type="radio" name="radio" value="3"/> Not Sure
           </label>
 
           <label for="dropdown-2" id="dropdown-label-2">
@@ -105,7 +105,8 @@
             ></textarea>
           </label>
 
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" id="submit"/>
+
         </form>
       </fieldset>
     </main>
