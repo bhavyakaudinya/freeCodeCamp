@@ -1,3 +1,64 @@
 *{
+    /* 👇🏻the box-sizing property allows us to include the padding and border in an element's **total** width and height */
+    /*  */
     box-sizing: border-box;
+}
+
+body{
+    /* 👇🏻 to remove the margin from the body element */
+    margin: 0;
+    background-color: #f5f6f7;
+    font-family: sans-serif;
+}
+
+.header{
+    text-align: center;
+    /* makes the text uppercase! */
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    /* 👇🏻 this proprty sets an element's bottom border */
+    border-bottom: 4px solid #fdb347;
+}
+
+.gallery{
+    display: flex;
+    
+    /*  */
+    flex-direction: row;
+
+    /* 👇🏻 this property defines how your flex items behave when your flex container is too small, by setting it to **wrap** allows it to wrap to the next row */
+    flex-wrap: wrap;
+
+    /* 👇🏻 determines how the items inside a flex container are positioned along the main axis, affecting their positioned along the main axis, affecting their position and the space around them */
+    justify-content: center;
+
+    /* 👇🏻positon the flex content along the cross axis */
+    align-items: center;
+
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    /* 👇🏻 this property sets the gap,between rows and columns */
+    gap: 16px;
+}
+
+/* 👇🏻 this tagets all the image element inside this particular class */
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+
+    /* 👇🏻 this property is to determine how images should behave */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 👇🏻 **::after** pseudo-element creates an element that is the last child of the selected element */
+
+.gallery::after{
+    content: "";
+    width: 350px;
 }
