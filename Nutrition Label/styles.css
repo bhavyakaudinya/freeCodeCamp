@@ -1,3 +1,70 @@
+*{
+    /* this is used because, by default the browser includes the border and padding when determining an element's size, to solve this, we reset the box model by using box-sizing property to an global a */
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
 body{
     font-family: "Open Sans", sans-serif;
+}
+
+.label{
+    border: 2px solid black;
+    width: 270px;
+    /*👇🏻 the first value is always given as the [Vertically (top/bottom)] value and 
+    the second value given as the [horizontal(left/right)] value */
+    margin: 20px auto;
+    padding: 0 7px;
+}
+
+header h1{
+    text-align: center;
+    margin: -4px 0;
+    /* 👇🏻 this property can be used to adjust the space b/w each character of text in an element */
+    letter-spacing: 0.15px;
+}
+
+.divider{
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+}
+
+p{
+    margin: 0;
+    /* 👇🏻 we can add horizontal spacing using flex */
+    display: flex;
+    justify-content: space-between;
+}
+
+.bold{
+    /* 👇🏻this property makes the h1 text bolder */
+    font-weight: 800;
+}
+
+.large{
+    height: 10px;
+}
+
+.large, .medium{
+    background-color: black;
+    border: 0;
+}
+
+.small-text{
+    font-size: 0.85rem;
+}
+
+.calories-info{
+    display: flex;
+    /* 👇🏻 here all the available space is inserted between the first and last items, pushing them to the container's opposing ends */
+    justify-content:space-between;
+    
+    align-items: flex-end;
+}
+
+.calories-info h2{
+    margin: 0;
 }
