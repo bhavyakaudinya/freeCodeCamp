@@ -48,12 +48,6 @@
 
                 <h2 id="html-questions">HTML Questions</h2>
 
-            </section>
-
-            <section role="region" aria-labelledby="css-questions">
-
-                <h2 id="css-questions">CSS Questions</h2>
-
                 <div class="question-block">
                     <p>1</p>
                     <fieldset class="question" name="html-questions-one">
@@ -61,30 +55,31 @@
                         <ul class="answers-list">
                             <li>
                                 <label for="q1-a1">
-                                    <input type="radio" name="" id="q1-a1">
+                                    <input type="radio" name="ques-one" id="q1-a1" value="TRUE"> True
                                 </label>
                             </li>
                             <li>
                                 <label for="q1-a2">
-                                    <input type="radio" name="" id="q1-a2">
+                                    <input type="radio" name="ques-one" id="q1-a2" value="FALSE"> False
                                 </label>
                             </li>
                         </ul>
                     </fieldset>
                 </div>
+
                 <div class="question-block">
                     <p>2</p>
                     <fieldset class="question" name="html-questions-two">
                         <legend>A label element nesting an input element is required to have a for attribute with the same value as the input's ID</legend>
-                        <ul class="answers-list">
+                        <ul class="answers-list" >
                             <li>
                                 <label for="q2-a1">
-                                    <input type="radio" name="" id="q2-a1">
+                                    <input type="radio" name="ques-two" id="q2-a1" value="TRUE"> True
                                 </label>
                             </li>
                             <li>
                                 <label for="q2-a2">
-                                    <input type="radio" name="" id="q2-a2">
+                                    <input type="radio" name="ques-two" id="q2-a2" value="FALSE"> False
                                 </label>
                             </li>
                         </ul>
@@ -92,7 +87,45 @@
                 </div>
 
             </section>
+
+            <section role="region" aria-labelledby="css-questions">
+
+                <h2 id="css-questions">CSS Questions</h2>
+
+                <div class="formrow">
+                    <div class="question-block">
+                        <label for="answer-one">Are you a fronten developer?</label>
+                    </div>
+                    <div class="answer">
+                        <select name="answers-selction" id="answer-one" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="textarea-answers">Do you have any questions:</label>
+                    </div>
+                    <div class="answer">
+                        <textarea name="textarea-answers" id="textarea-answers" cols="50" rows="6" placeholder="Who is flexbox...."></textarea>
+                    </div>
+                </div>
+
+            </section>
+
+            <input type="submit" value="Send">
+
         </form>
     </main>
+
+    <footer>
+        <address>
+            <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+            San Francisco <br />
+            California <br />
+            USA
+        </address>
+    </footer>
+
 </body>
 </html>

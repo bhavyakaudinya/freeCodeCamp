@@ -24,6 +24,12 @@ h1{
     font-size: min(5vw, 1.2em);
 }
 
+nav >ul > li{
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+}
 
 /* 👇🏻 we have used ">" or a CHILD COMBINATOR */
 nav > ul{
@@ -40,6 +46,13 @@ h2{
     border-bottom: 4px solid #dfdfe2;
 }
 
+/* 👇🏻 to prevent the unnecessary repetition....
+   👇🏻 ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property*/
+p::before{
+    /* 👇🏻 content CSS property replaces an element with a generated value. */
+    content: "Question #";
+}
+
 /* 👇🏻 this pattern is to visually hide text for only screen reader to read */
 .sr-only{
     position: absolute;
@@ -52,3 +65,4 @@ h2{
     white-space: nowrap;
     border: 0;
 }
+
