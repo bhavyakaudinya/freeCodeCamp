@@ -13,15 +13,55 @@ body {
 }
 
 header{
+
     width: 100%;
+
     height: 50px;
+
     background-color: #1b1b32;
+
+    /* 👇🏻 An element with [ position: fixed; ] is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. */
+    position: fixed;
+
+    /* 👇🏻 this property specifies the default alignment for items inside a flexbox or a grid container*/
+    /* Use the align-items property to align the items vertically. */
+    align-items: center;
+
+    /* 👇🏻The top property affects the vertical position of a positioned element. This property has no effect on non-positioned elements. If position: absolute; or position: fixed; - the top property sets the top edge of an element to a unit above/below the top edge of its nearest positioned ancestor. */
+    top: 0;
+
     display: flex;
+    /* 👇🏻 this property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally). */
+    /* the items will have speace between them*/
+    justify-content: space-between;
 }
 
 h1{
     color: #f1be32;
     font-size: min(5vw, 1.2em);
+    text-align: center;
+}
+
+h2{
+    border-bottom: 4px solid #dfdfe2;
+    margin-top: 0;
+    padding-top: 60px;
+}
+
+h1, h2{
+    font-family: Verdana, sans-serif;
+}
+
+
+main{
+    padding-top: 25px;
+}
+
+section{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    max-width: 600px;
 }
 
 nav >ul > li{
@@ -34,16 +74,16 @@ nav >ul > li{
 /* 👇🏻 we have used ">" or a CHILD COMBINATOR */
 nav > ul{
     display: flex;
+
     /* 👇🏻 defines how the browser distributes space betweenand around content items along the main-axis of a flex container, and the inline of a grid container.... */
     justify-content: space-evenly;
-}
 
-h1, h2{
-    font-family: Verdana, sans-serif;
-}
-
-h2{
-    border-bottom: 4px solid #dfdfe2;
+    /* 👇🏻 this property sets whether flex items are forced onto one line or can wrap onto multiples lines */
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
 }
 
 /* 👇🏻 to prevent the unnecessary repetition....
@@ -66,3 +106,17 @@ p::before{
     border: 0;
 }
 
+
+/* #step42(freeCodeCamp) on the topic of VISUAL accessibility, contrast between elements is a key factor.
+For example: the contrast between the text and the background of a heading should be at least 4:5:1. */
+/* 👇🏻 changing the font color of all the anchor elements within the list elements to something with a contrast ratio of 7:1. */
+li > a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav li:hover{
+    color:#1b1b32;
+    cursor: pointer;
+    background-color: #dfdfe2;
+}
