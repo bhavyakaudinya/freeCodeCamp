@@ -6,3 +6,41 @@ body{
     font-family: sans-serif;
     color: #0a0a23;
 }
+
+h1{
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+
+h1.flex{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+/*  The span[class~="sr-only"] selector will select any span element whose class includes sr-only  */
+
+/*  👇🏻these properties is used to ensure that elements are completely hidden visually  */
+span[class~="sr-only"]{
+
+    /*  👇🏻these properties is used to ensure that elements are completely hidden visually  */
+    border: 0;
+
+    /* The CSS clip property is used to define the visible portions of an element */
+    clip: rect(1px, 1px, 1px, 1px);
+
+    /* The clip-path property determines the shape the clip property should take */
+    clip-path: inset(50%);
+
+    width: 1px;
+    height: 1px;
+
+    /* 👇🏻 to prevent the text content from overflowing */
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+}
+
