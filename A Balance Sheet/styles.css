@@ -13,34 +13,106 @@ h1{
     padding: 1.5rem 1.25rem;
 }
 
-h1.flex{
+h1 .flex{
     display: flex;
     flex-direction: column-reverse;
     gap: 1rem;
 }
 
-/*  The span[class~="sr-only"] selector will select any span element whose class includes sr-only  */
+/* 👇🏻 it targets the first element that matches the selector */
+h1 .flex span:first-of-type{
+    font-size: 0.7em;
+}
 
-/*  👇🏻these properties is used to ensure that elements are completely hidden visually  */
+h1 .flex span:last-of-type{
+    font-size: 1.2em;
+}
+
+section{
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+
+#years{
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    color: #fff;
+    background: #0a0a23;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    z-index: 999;
+}
+
+/*  👇🏻 this will target any sapn element that has a class attribute set, regardless of the attribute's value */
+#years span[class]{
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
+
+
+.table-wrap{
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+
+/* 👇🏻 The :not() pseudo-selector is used to target all elements that do not match the selector */
+span{
+    font-weight: normal;
+}
+
+table{
+    border-collapse: collapse; /* this will allow cell broders to collapse into a single border, instead of border around each cell */
+
+    /* 👇🏻 to hide the border themselves */
+    border: 0;
+
+    width: 100%;
+    position: relative;
+    margin-top: 3rem;
+}
+
+
+table caption{
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+}
+
+tbody td{
+    width: 100vw;
+    min-width: 4rem;
+    max-width: 4rem;
+}
+
+
+/*  The span[class~="sr-only"] selector will select any span element whose class includes sr-only  */
+/* 👇🏻 This ensures that your earlier rules for the span[class~="sr-only"] selector are not overwritten */
 span[class~="sr-only"]{
 
     /*  👇🏻these properties is used to ensure that elements are completely hidden visually  */
-    border: 0;
+    border: 0 !important;
 
     /* The CSS clip property is used to define the visible portions of an element */
-    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(1px, 1px, 1px, 1px) !important;
 
     /* The clip-path property determines the shape the clip property should take */
-    clip-path: inset(50%);
+    clip-path: inset(50%) !important;
 
-    width: 1px;
-    height: 1px;
+    width: 1px !important;
+    height: 1px !important;
 
     /* 👇🏻 to prevent the text content from overflowing */
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    padding: 0;
-    margin: -1px;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    position: absolute !important;
+    padding: 0 !important;
+    margin: -1px !important;
 }
 
