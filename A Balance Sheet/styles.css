@@ -58,11 +58,7 @@ section{
     padding: 0 0.75rem 1.5rem 0.75rem;
 }
 
-
 /* 👇🏻 The :not() pseudo-selector is used to target all elements that do not match the selector */
-span{
-    font-weight: normal;
-}
 
 table{
     border-collapse: collapse; /* this will allow cell broders to collapse into a single border, instead of border around each cell */
@@ -92,6 +88,68 @@ tbody td{
 }
 
 
+tbody th{
+    width: calc(100% - 12rem);
+}
+
+tr[class="total"]{
+    border-bottom: 4px double #0a0a23;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td{
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+/* 👇🏻 The :nth-of-type() pseudo-selector is used to target specific elements based on their order among siblings of the same type.*/
+tr.total td:nth-of-type(3){
+    padding-right: 0.5rem;
+}
+
+
+tr.total:hover{
+    background-color: #99c9ff;
+}
+
+
+tr.data{
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th{
+    text-align: left;
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+}
+
+td.current{
+    font-style: italic;
+}
+
+
+tr.data th .description{
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    padding: 1rem 0 0.75rem;
+    margin-right: -13.5rem;
+}
+
+
+tr.data td{
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type{
+    padding-right: 0.5rem;
+}
+
+
 /*  The span[class~="sr-only"] selector will select any span element whose class includes sr-only  */
 /* 👇🏻 This ensures that your earlier rules for the span[class~="sr-only"] selector are not overwritten */
 span[class~="sr-only"]{
@@ -116,3 +174,14 @@ span[class~="sr-only"]{
     margin: -1px !important;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 800;
+    font-size: larger;
+}
+
+address > p{
+    text-align: center;
+}
