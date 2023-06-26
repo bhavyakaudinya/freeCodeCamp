@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(184, 132, 46);
+}
+
+#back-wall{
+    background-color: #8b4513;
+    width: 100%;
+    height: 60%;
+
+    /* 👇🏻 An absolute postion takes the element out of that top-down document flow and allows you to adjust it relative to its container. */
+    position: absolute;
+
+    /* when an element is manually positioned, you can shifts it's layout with [top], [left], [right], and [bottom]. */
+    top: 0;
+    left: 0;
+
+    /* 👇🏻 this property is used to create layers for your HTML elements */
+    /* Elements with a higher z-index value will appear to be layered on top of elements with a lower z-index value. 
+    This can be combined with the positioning in the previous lesson to create unique effects. */
+    z-index: -1;
+}
+
+#offwhite-character{
+    width: 300px;
+    height: 550px;
+    background-color: ghostwhite;
+    position: absolute;
+    top: 20%;
+    left: 17.5%;
+}
+
+#white-hat{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 120px 140px 180px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: ghostwhite;
+    position: absolute;
+    top: -140px;
+    left: 0;
+}
