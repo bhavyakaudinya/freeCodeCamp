@@ -22,6 +22,8 @@ I've used HTML(Hypertext Markup Languages) for content, and CSS(Cascading Style 
 
 || [Nutrition Label](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Nutrition%20Label)
 
+|| [Picasso Painting](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Picasso%20Painting) ||
+
 || [Registration Form](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Registration%20Form) ||
 
 || [Rothko Painting](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Rothko%20Painting) ||
