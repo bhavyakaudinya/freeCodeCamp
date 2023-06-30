@@ -41,6 +41,8 @@ I hope this helps!
 
 || [A Quiz](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/A%20Quiz) ||
 
+|| [Building a Piano](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Building%20a%20Piano) ||
+
 || [Cafe Menu](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Cafe%20Menu) ||
 
 || [CatPhotoApp](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/CatPhotoApp) ||
