@@ -57,7 +57,9 @@ I hope this helps!
 
 || [Rothko Painting](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Rothko%20Painting) ||
 
-|| [Survey Form](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Survey%20Form)  ||
+|| [Survey Form](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Survey%20Form) ||
+
+|| [Technical Documentation Page](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Technical%20Documentation%20Page) ||
 
 || [Tribute Page](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Tribute%20Page) ||
 
