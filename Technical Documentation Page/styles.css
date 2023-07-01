@@ -1,20 +1,20 @@
-*{
+body{
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 header{
     font-size: 30px;
     font-weight: 350;
+    
 }
 
 
 code{
     display: block;
     text-align: left;
-    position: relative;
-
-    
+    position: relative; 
     white-space: pre-line;
     word-break: normal;
     word-wrap: normal;
