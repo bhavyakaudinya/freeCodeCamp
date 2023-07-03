@@ -26,7 +26,7 @@ Here are some of the benefits of taking the freeCodeCamp Responsive Web Design C
 * You'll build your portfolio with responsive websites.
 * You'll learn by doing with project-based exercises.
 * You'll be part of a supportive community of developers.
-* 
+
 If you're interested in learning more about the freeCodeCamp Responsive Web Design Certification course, you can visit the following website: <a href="https://www.freecodecamp.org/learn/responsive-web-design">Responsive Web Design</a>
 
 I hope this helps!
@@ -46,6 +46,8 @@ I hope this helps!
 || [Cafe Menu](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Cafe%20Menu) ||
 
 || [CatPhotoApp](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/CatPhotoApp) ||
+
+|| [City Skyline](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/City%20Skyline) ||
 
 || [FlexBox Photo Gallery](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/FlexBox%20Photo%20Gallery) ||
 
