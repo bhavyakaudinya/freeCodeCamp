@@ -14,6 +14,7 @@ body{
 .label{
     border: 2px solid black;
     width: 270px;
+
     /*👇🏻 the first value is always given as the [Vertically (top/bottom)] value and 
     the second value given as the [horizontal(left/right)] value */
     margin: 20px auto;
@@ -23,6 +24,7 @@ body{
 header h1{
     text-align: center;
     margin: -4px 0;
+
     /* 👇🏻 this property can be used to adjust the space b/w each character of text in an element */
     letter-spacing: 0.15px;
 }
@@ -34,6 +36,7 @@ header h1{
 
 p{
     margin: 0;
+    
     /* 👇🏻 we can add horizontal spacing using flex */
     display: flex;
     justify-content: space-between;
@@ -63,8 +66,10 @@ p{
 
 .calories-info{
     display: flex;
+    
     /* 👇🏻 here all the available space is inserted between the first and last items, pushing them to the container's opposing ends */
     justify-content:space-between;
+
     /* 👇🏻need to review the defination of flex-end! */
     align-items: flex-end;
 }
