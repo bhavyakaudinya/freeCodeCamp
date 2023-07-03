@@ -37,7 +37,8 @@ fieldset:last-of-type{
 }
 
 input, textarea, select{
-    width: 100%; /* this is used to make element take up the full width of their parents elements */
+    /* this is used to make element take up the full width of their parents elements */
+    width: 100%; 
     margin-top: 10px;
     margin-bottom: 0;
     margin-left: 0;
@@ -51,7 +52,9 @@ input, textarea, select{
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
-    vertical-align: middle; /* used only to combat if the elements are too high */
+    
+    vertical-align: middle;
+    /*👆🏻 used only to combat if the elements are too high */
 }
 
 input, textarea{
