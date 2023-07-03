@@ -23,17 +23,17 @@ body{
 #navbar ul {
     height: 88%;
     padding: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
-  }
+}
 
-#navbar a {
+#navbar a{
     display: block;
     padding: 10px 30px;
     color: #4d4e53;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
 main{
     display: block;
