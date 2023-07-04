@@ -18,4 +18,37 @@ body{
 .bb1{
     width: 10%;
     height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    /* 👆🏻   property that is used in conjunction with flexbox layout. It specifies the direction in which flex items are arranged within a flex container.*/
+    /*  the flex items are stacked vertically from top to bottom inside the container. In other words, the main axis of the flex container runs vertically, and the cross axis runs horizontally. This is different from the default behavior of flex containers, which is "flex-direction: row;" where the flex items are arranged horizontally from left to right. */
+
+    align-items: center;
+
+    /* 👇🏻 Variable declarations begin with two dashes (-) and are given a name and a value like this: --variable-name: value; */
+    --building-color1: #999;
+}
+
+.bb1a{
+    width: 70%;
+    height: 10%;
+
+    /* 👇🏻 To use a variable, put the variable name in parentheses with var in front of them like this: var(--variable-name). Whatever value you gave the variable will be applied to whatever property you use it on. */
+    background-color: var(--building-color1);
+}
+
+.bb1b{
+    width: 80%;
+    height: 10%;
+}
+
+.bb1c{
+    width: 90%;
+    height: 10%;
+}
+
+.bb1d{
+    width: 100%;
+    height: 70%;
 }
