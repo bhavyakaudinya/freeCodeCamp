@@ -1,3 +1,11 @@
+/* variables are often declared in the :root selector. This is the highest level selector in CSS; putting your variables there will make them usable everywhere */
+:root{
+    --building-color1: #aa80ff;
+    --building-color2: #66cc99;
+    --building-color3: #cc6699;
+    --building-color4: #538cc6;
+}
+
 *{
     /* 👇🏻 This is a trick that helps visualize where elements are and their size. */
     border: 1px solid black;
@@ -10,12 +18,14 @@ body{
     overflow: hidden;
 }
 
-.background-buildings{
+.background-buildings, .foreground-buildings{
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
 }
 
 .bb1{
@@ -31,10 +41,7 @@ body{
 
     /* 👇🏻 Variable declarations begin with two dashes (-) and are given a name and a value like this: --variable-name: value; */
     /* 👇🏻 the main advantage of using variables, being able to quickly change many values in your stylesheet by just changing the value of a variable. */
-    --building-color1: #aa80ff;
-    --building-color2: #66cc99;
-    --building-color3: #cc6699;
-    --building-color4: ;
+    
 }
 
 .bb1a{
@@ -80,4 +87,43 @@ body{
 .bb4{
     width: 11%;
     height: 58%;
+    background-color: var(--building-color4);
+}
+
+.foreground-buildings{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.fb1{
+    width: 10%;
+    height: 60%;
+}
+
+.fb2{
+    width: 10%;
+    height: 40%;
+}
+
+.fb3{
+    width: 10%;
+    height: 35%;
+}
+
+.fb4{
+    width: 8%;
+    height: 45%;
+}
+
+.fb5{
+    width: 10%;
+    height: 33%;
+}
+
+.fb6{
+    width: 9%;
+    height: 38%;
 }
