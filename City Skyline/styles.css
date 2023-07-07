@@ -47,33 +47,31 @@ body{
 
 .bb1a{
     width: 70%;
-    height: 10%;
-
-    /* 👇🏻 To use a variable, put the variable name in parentheses with var in front of them like this: var(--variable-name). Whatever value you gave the variable will be applied to whatever property you use it on. */
-    background-color: var(--building-color1);
-
-    /* 👇🏻 Using Gradient Function  */
-    /* Note to my self: Use */
-    background: linear-gradient(var(--building-color1), var(--window-color1));
 }
 
 .bb1b{
     width: 80%;
-    height: 10%;
-    background-color: var(--building-color1);
 }
 
 .bb1c{
     width: 90%;
-    height: 10%;
-    background-color: var(--building-color1);
 }
 
 /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
 .bb1d{
     width: 100%;
     height: 70%;
+    /* 👇🏻 To use a variable, put the variable name in parentheses with var in front of them like this: var(--variable-name). Whatever value you gave the variable will be applied to whatever property you use it on. */
     background-color: var(--building-color1);
+    background: linear-gradient(orange, var(--building-color1), var(--window-color1));
+}
+
+.bb1-window{
+    height: 10%;
+
+    /* 👇🏻 Using Gradient Function  */
+    /* Note to self: Use var() function for giving or assigning self-declared values to attributes... */
+    background: linear-gradient(var(--building-color1), var(--window-color1));
 }
 
 .bb2{
@@ -144,3 +142,4 @@ body{
     height: 38%;
     background-color: var(--building-color3);
 }
+
