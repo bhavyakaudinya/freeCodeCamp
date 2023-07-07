@@ -6,6 +6,7 @@
     --building-color4: #538cc6;
     --window-color1: black;
     --window-color2: #8cd9b3;
+    --window-color3: #d98cb3;
 }
 
 *{
@@ -82,7 +83,17 @@ body{
     height: 50%;
 
     /* 👇🏻 ou should add a **fallback value** to a variable by putting it as the second value of where you use the variable like this: var(--variable-name, fallback-value). The property will use the fallback value when there's a problem with the variable */
-    background-color: var(--building-color2, green);
+    /* background-color: var(--building-color2, green); */
+}
+
+.bb2a{
+    /* margin: auto; */
+    /* width: 5vw;
+    height: 5vw; */
+    /* border-top: 1vw solid #000; */
+    border-bottom: 5vh solid var(--building-color2);
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
 }
 
 .bb2b{
