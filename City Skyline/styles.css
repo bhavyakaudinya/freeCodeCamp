@@ -17,7 +17,7 @@
 
 *{
     /* 👇🏻 This is a trick that helps visualize where elements are and their size. */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing: border-box;
 }
 
@@ -25,6 +25,18 @@ body{
     height: 100vh;
     margin: 0;
     overflow: hidden;
+}
+
+.sky{
+    /* 👇🏻 this will add circular gradient to the background that will be your SUN */
+    background: radial-gradient(
+        /* 👇🏻 This will move the start of the gradient to 15% fromm the top and left, it will make it end at the closest-corner and it will maintain a circle shape*/
+        circle closest-corner at 15% 15%, /* ADVANCED CSS */
+        #ffcf33,
+        #ffcf33 20%,
+        #ffff66 21%,
+        #bbeeff 100%
+    );
 }
 
 .background-buildings, .foreground-buildings{
@@ -291,7 +303,7 @@ body{
 .fb5{
     width: 10%;
     height: 33%;
-    background-color: var(--building-color2);
+    /* background-color: var(--building-color2); */
     position: relative;
     right: 10%;
     /* Use "comma" for adding multiple gradient to an element's attribute */
@@ -313,5 +325,48 @@ body{
 .fb6{
     width: 9%;
     height: 38%;
-    background-color: var(--building-color3);
+    /* background-color: var(--building-color3); */
+    background: repeating-linear-gradient(
+        90deg, 
+        var(--building-color3), 
+        var(--building-color3) 10%, 
+        transparent 10%, 
+        transparent 30%
+        ),
+        repeating-linear-gradient(
+            var(--building-color3), 
+            var(--building-color3) 10%, 
+            var(--window-color3) 10%,
+            var(--window-color3) 30%
+        );
+}
+
+@media (max-width: 1000px){
+
+    :root{
+        --building-color1: #000;
+        --building-color2: #000;
+        --building-color3: #000;
+        --building-color4: #000;
+        --window-color1: #777;
+        --window-color2: #777;
+        --window-color3: #777;
+        --window-color4: #777;
+    }
+
+
+    /* to reflect the day and night conditon on the screen, we used the @media property */ 
+    /* when we resize the window where we'll see the background change colors */
+
+    .sky{
+        /* 👇🏻 this will add circular gradient to the background that will be your SUN */
+        background: radial-gradient(
+            /* 👇🏻 This will move the start of the gradient to 15% fromm the top and left, it will make it end at the closest-corner and it will maintain a circle shape*/
+            circle closest-corner at 15% 15%, /* ADVANCED CSS */
+            #ccc,
+            #ccc 20%,
+            #445 21%,
+            #223 100%
+        );
+    }
 }
