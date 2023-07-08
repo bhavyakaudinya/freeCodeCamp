@@ -51,6 +51,8 @@ I hope this helps!
 
 || [FlexBox Photo Gallery](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/FlexBox%20Photo%20Gallery) ||
 
+|| [Magazine](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Magazine) ||
+
 || [Nutrition Label](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Nutrition%20Label)
 
 || [Picasso Painting](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Picasso%20Painting) ||
