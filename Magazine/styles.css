@@ -55,6 +55,8 @@ main{
 
 .text{
     grid-column: 2/3;
+    font-size: 1.8rem;
+    letter-spacing: 0.6px;
 }
 
 .hero{
@@ -74,4 +76,40 @@ img{
     text-align: center;
     color: orangered;
     font-size: 8rem; /* here 8rem == 80px*/
+}
+
+.hero-subtitle{
+    font-size: 2.4rem;
+    color: orangered;
+    text-align: center;
+}
+
+.author{
+    font-size: 2rem;
+    font-family: Raleway, sans-serif;
+}
+
+.author-name a:hover{
+    /* This will create a hover effect only for the a element within the .author-name, showing the original freeCodeCamp green in the background. */
+    background-color: #306203;
+}
+
+.publish-date{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.social-icons{
+    display: grid;
+    font-size: 3rem; /* here 3rem == 30px */
+    grid-template-columns: repeat(5, 1fr);
+
+    /* 👇🏻 grid-auto-flow uses an auto-placement algorithm to adjust the grid layout. Setting it to column will tell the algorithm to create new columns for content as needed. */
+    grid-auto-flow: column;
+
+    /* after applying [grid-auto-flow] value to the element...*/
+    /* Now the auto-placement algorithm will kick in whenever you add a new icon elemen */
+    /* However, the algorithm defaults the new column width to be auto, which will not match your current columns. */
+    /* You can override this with the [grid-auto-columns] property */
+    grid-auto-columns: 1fr;
+    align-items: center;
 }
