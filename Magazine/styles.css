@@ -55,6 +55,14 @@ main{
 
 .text{
     grid-column: 2/3;
+    font-size: 1.8rem;
+    letter-spacing: 0.6px;
+    /* this [.text] element is not a CSS Grid, 
+    but you can create columns within an element without using Grid by using the [column-width] property. */
+    column-width: 25rem;
+
+    /* to make this project look like a printed magzine, i.e. we set [text-align]  */
+    text-align: justify;
 }
 
 .hero{
@@ -74,4 +82,146 @@ img{
     text-align: center;
     color: orangered;
     font-size: 8rem; /* here 8rem == 80px*/
+}
+
+.hero-subtitle{
+    font-size: 2.4rem;
+    color: orangered;
+    text-align: center;
+}
+
+.author{
+    font-size: 2rem;
+    font-family: Raleway, sans-serif;
+}
+
+.author-name a:hover{
+    /* This will create a hover effect only for the a element within the .author-name, showing the original freeCodeCamp green in the background. */
+    background-color: #306203;
+}
+
+.publish-date{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.social-icons{
+    display: grid;
+    font-size: 3rem; /* here 3rem == 30px */
+    grid-template-columns: repeat(5, 1fr);
+
+    /* 👇🏻 grid-auto-flow uses an auto-placement algorithm to adjust the grid layout. Setting it to column will tell the algorithm to create new columns for content as needed. */
+    grid-auto-flow: column;
+
+    /* after applying [grid-auto-flow] value to the element...*/
+    /* Now the auto-placement algorithm will kick in whenever you add a new icon elemen */
+    /* However, the algorithm defaults the new column width to be auto, which will not match your current columns. */
+    /* You can override this with the [grid-auto-columns] property */
+    grid-auto-columns: 1fr;
+    align-items: center;
+}
+
+/* The [::first-letter] pseudo-selector allows you to target the first letter in the text content of an element. */
+.first-paragraph::first-letter{
+    font-size: 6rem;
+    color: orangered;
+    float: left;
+    margin-right: 1rem;
+}
+
+hr{
+    margin: 1.5rem 0;
+    border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.quote{
+    color: #00beef;
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+}
+
+/* always remember to use single quote while using [content] proptery in CSS */
+.quote::before{
+    content: '" ' ;
+}
+
+.quote::after{
+    content: ' "';
+}
+
+.text-with-images{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.lists{
+    list-style-type: none;
+    margin-top: 2rem;
+}
+
+.lists li{
+    margin-bottom: 1.5rem;
+}
+
+.list-title, .list-subtitle{
+    color: #00beef;
+}
+
+.image-wrapper{
+    display: grid;
+
+    /* This will give our grid rows that adjust in height based on the content, but columns that remain a fixed width based on the container. */
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+
+    /* The gap property is a shorthand way to set the value of column-gap and row-gap at the same time. 
+    If given one value, it sets the column-gap and row-gap both to that value.
+    If given two values, it sets the row-gap to the first value and the column-gap to the second. */
+    gap: 2rem;
+    place-items: center;
+}
+
+.image-1, .image-3{
+    /* This will allow the first and third images to span the full width of the grid. */
+    grid-column: 1/-1;
+}
+
+@media only screen and (max-width: 720px) {
+    /* This will collapse the three images into one column on smaller screens. */
+    .image-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* This will collapse your bottom text area into a single column on smaller screens. */
+    .text-with-images{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .hero-title{
+        font-size: 6rem;
+    }
+
+    .hero-subtitle, .author, .quote, .list-title{
+        font-size: 1.8rem;
+    }
+
+    .social-icons{
+        font-size: 2rem;
+    }
+
+    .text{
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .hero-title{
+        font-size: 4.5rem;
+    }
 }
