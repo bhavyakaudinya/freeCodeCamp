@@ -57,6 +57,12 @@ main{
     grid-column: 2/3;
     font-size: 1.8rem;
     letter-spacing: 0.6px;
+    /* this [.text] element is not a CSS Grid, 
+    but you can create columns within an element without using Grid by using the [column-width] property. */
+    column-width: 25rem;
+
+    /* to make this project look like a printed magzine, i.e. we set [text-align]  */
+    text-align: justify;
 }
 
 .hero{
@@ -112,4 +118,53 @@ img{
     /* You can override this with the [grid-auto-columns] property */
     grid-auto-columns: 1fr;
     align-items: center;
+}
+
+/* The [::first-letter] pseudo-selector allows you to target the first letter in the text content of an element. */
+.first-paragraph::first-letter{
+    font-size: 6rem;
+    color: orangered;
+    float: left;
+    margin-right: 1rem;
+}
+
+hr{
+    margin: 1.5rem 0;
+    border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.quote{
+    color: #00beef;
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+}
+
+/* always remember to use single quote while using [content] proptery in CSS */
+.quote::before{
+    content: '" ' ;
+}
+
+.quote::after{
+    content: ' "';
+}
+
+.text-with-images{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.lists{
+    list-style-type: none;
+    margin-top: 2rem;
+}
+
+.lists li{
+    margin-bottom: 1.5rem;
+}
+
+.list-title, .list-subtitle{
+    color: #00beef;
 }
