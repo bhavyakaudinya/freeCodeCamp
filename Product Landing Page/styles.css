@@ -11,11 +11,16 @@ body{
 }
 
 #header{
+    width: 100%;
     display: flex;
     /* by default the flex direction is set to row, which means right to left.. */
     /* flex-direction: row; */
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #eee7e7;
 }
 
 .logo{
@@ -30,7 +35,9 @@ body{
 }
 
 #nav-bar{
-    /* position: fixed; */
+    position: relative;
+    /* 👇🏻 Your #nav-bar should always be at the top of the viewport */ 
+    top: 0;
     font-weight: 500;
     width: 20rem;
 }
@@ -53,6 +60,11 @@ body{
     align-items: center;
 }
 
+#under-heading{
+    /* when we used the [positon: fixed;] in header element the under-heading element is underlapping the header content so we need to adjust some space to it i.e we used padding top */
+    padding-top: 5rem;
+}
+
 #email{
     width: 100%;
     margin: 1rem;
@@ -61,6 +73,7 @@ body{
 input[type="email"]{
     min-width: 14rem;
     height: 2rem;
+    padding: 5px;
 }
 
 #submit{
@@ -71,24 +84,81 @@ input[type="email"]{
     border: none;
 }
 
-
 #Features{
     padding: 10px;
-    margin: 10px;
+    border: 2px;
 }
 
 .order{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .para-logo{
     padding: 15px;
 }
 
+.para-space{
+    align-items: center;
+    /* this is to center align everthing we adjust in .order element to make it responsive for the USER */
+    max-width: 800px;
+}
+
 .side-img{
     width: 70px;
     /* this property is used make the white background transparent in CSS */
     mix-blend-mode: multiply;
+    /* using this property has a drawback, so whenever I scroll thru the IMAGE thru an element with fixed position, it really blends in with that element and doesn't hides fully!!!  */
 }
 
+#video{
+    display: block;
+    margin: 0 auto;
+    width: 550px;
+    height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#Pricing{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    gap: 1rem 1rem;
+    margin: 0 auto;
+    padding: 20px;
+    min-width: 250px;
+    height: 320px;
+}
+
+.select-btn{
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(240, 186, 10);
+    border: none;
+}
+
+footer{ 
+    display: flex;
+    justify-content: right;
+    background-color: lightgrey;
+}
+
+.foot-list{
+    display: flex
+}
+
+.foot-link{
+    color: black;
+    text-decoration: none;
+}
