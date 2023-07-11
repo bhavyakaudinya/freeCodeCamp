@@ -57,6 +57,8 @@ I hope this helps!
 
 || [Picasso Painting](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Picasso%20Painting) ||
 
+|| [Product Landing Page](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Product%20Landing%20Page) ||
+
 || [Registration Form](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Registration%20Form) ||
 
 || [Rothko Painting](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Rothko%20Painting) ||
