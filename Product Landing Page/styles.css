@@ -11,11 +11,14 @@ body{
 }
 
 #header{
+    width: 100%;
     display: flex;
     /* by default the flex direction is set to row, which means right to left.. */
     /* flex-direction: row; */
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    background-color: #eee7e7;
 }
 
 .logo{
@@ -53,6 +56,11 @@ body{
     align-items: center;
 }
 
+#under-heading{
+    /* when we used the [positon: fixed;] in header element the under-heading element is underlapping the header content so we need to adjust some space to it i.e we used padding top */
+    padding-top: 5rem;
+}
+
 #email{
     width: 100%;
     margin: 1rem;
@@ -88,6 +96,7 @@ input[type="email"]{
 
 .para-space{
     align-items: center;
+    /* this is to center align everthing we adjust in .order element to make it responsive for the USER */
     max-width: 800px;
 }
 
@@ -95,6 +104,7 @@ input[type="email"]{
     width: 70px;
     /* this property is used make the white background transparent in CSS */
     mix-blend-mode: multiply;
+    /* using this property has a drawback, so whenever I scroll thru the IMAGE thru an element with fixed position, it really blends in with that element and doesn't hides fully!!!  */
 }
 
 #video{
