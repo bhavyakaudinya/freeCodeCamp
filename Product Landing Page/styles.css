@@ -6,7 +6,7 @@
 
 body{
     background-color: #eee7e7;
-    letter-spacing: 0.1rem;
+    /* letter-spacing: 0.1rem; */
     font-family: 'Loto', sans-serif;
 }
 
@@ -30,11 +30,12 @@ body{
 }
 
 #nav-bar{
+    /* position: fixed; */
     font-weight: 500;
     width: 20rem;
 }
 
-ul{
+.nav-bar{
     display: flex;
     justify-content: space-around;
     list-style-type: none;
@@ -67,5 +68,27 @@ input[type="email"]{
     height: 30px;
     background-color: rgb(240, 186, 10);
     font-weight: 800;
+    border: none;
+}
+
+
+#Features{
+    padding: 10px;
+    margin: 10px;
+}
+
+.order{
+    display: flex;
+    align-items: center;
+}
+
+.para-logo{
+    padding: 15px;
+}
+
+.side-img{
+    width: 70px;
+    /* this property is used make the white background transparent in CSS */
+    mix-blend-mode: multiply;
 }
 
