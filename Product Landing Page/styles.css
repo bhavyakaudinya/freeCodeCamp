@@ -18,6 +18,8 @@ body{
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #eee7e7;
 }
 
@@ -33,7 +35,9 @@ body{
 }
 
 #nav-bar{
-    /* position: fixed; */
+    position: relative;
+    /* 👇🏻 Your #nav-bar should always be at the top of the viewport */ 
+    top: 0;
     font-weight: 500;
     width: 20rem;
 }
@@ -69,6 +73,7 @@ body{
 input[type="email"]{
     min-width: 14rem;
     height: 2rem;
+    padding: 5px;
 }
 
 #submit{
@@ -112,5 +117,48 @@ input[type="email"]{
     margin: 0 auto;
     width: 550px;
     height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
+#Pricing{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    gap: 1rem 1rem;
+    margin: 0 auto;
+    padding: 20px;
+    min-width: 250px;
+    height: 320px;
+}
+
+.select-btn{
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(240, 186, 10);
+    border: none;
+}
+
+footer{ 
+    display: flex;
+    justify-content: right;
+    background-color: lightgrey;
+}
+
+.foot-list{
+    display: flex
+}
+
+.foot-link{
+    color: black;
+    text-decoration: none;
+}
