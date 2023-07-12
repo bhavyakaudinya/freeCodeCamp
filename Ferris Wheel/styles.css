@@ -16,4 +16,38 @@
     position: absolute;
     left: 50%;
     top: 50%;
+
+    /* the transform-origin determines around which point the element is rotated. */
+    /* 👇🏻 this will offset the origin point by 0% from the left and 0% from the top, setting it to the top left corner of the element */
+    transform-origin: 0% 0%;
+}
+
+/* for target the 2nd element of .line element */
+.line:nth-of-type(2){
+    /* Remember that the transform property allows you to manipulate the shape of an element. In this case, using the rotate(60deg) value will rotate the element around its transform-origin point by 60 degrees clockwise. */
+    transform: rotate(60deg);
+}
+
+.line:nth-of-type(3){
+    transform: rotate(120deg);
+}
+
+.line:nth-of-type(4){
+    transform: rotate(180deg);
+}
+
+.line:nth-of-type(5){
+    transform: rotate(240deg);
+}
+
+.line:nth-of-type(6){
+    transform: rotate(300deg);
+}
+
+.cabin{
+    background-color: red;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    border: 2px solid;
 }
