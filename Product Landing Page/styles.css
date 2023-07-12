@@ -121,44 +121,95 @@ input[type="email"]{
     padding-bottom: 20px;
 }
 
-#Pricing{
-    padding: 40px;
+#pricing {
+    margin-top: 60px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
 }
-
-.cards{
-    border: 1px solid black;
+  
+.product {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-evenly; */
-    gap: 1rem 1rem;
-    margin: 0 auto;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+  
+.product > .level {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+  
+.product > h2 {
+    margin-top: 15px;
+}
+  
+.product > ol {
+    list-style-type: none;
+    margin: 15px 0;
+}
+  
+.product > ol > li {
+    padding: 5px 0;
+}
+
+/* .level > input[type="submit"]{
+    font-weight: 200;
+    margin-bottom: 20px;
+    width: 100%;
+} */
+
+.product > button:hover {
+    background-color: orange;
+    transition: background-color 1s;
+}
+  
+@media (max-width: 800px) {
+    #pricing {
+      flex-direction: column;
+    }
+    .product {
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+}
+
+footer{
+    margin-top: 30px;
+    background-color: #ddd;
     padding: 20px;
-    min-width: 250px;
-    height: 320px;
 }
 
-.select-btn{
-    width: 100px;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: rgb(240, 186, 10);
-    border: none;
-}
-
-footer{ 
+footer > ul{
     display: flex;
-    justify-content: right;
-    background-color: lightgrey;
-}
-
-.foot-list{
-    display: flex
+    justify-content: flex-end;
+    list-style-type: none;
 }
 
 .foot-link{
-    color: black;
+    color: rgb(43, 40, 40);
     text-decoration: none;
+}
+
+footer > ul > li{
+    padding: 0 10px;
+    /* 👆🏻 Vertical Horizontal */
+}
+
+footer > span{
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    color: #444;
 }
