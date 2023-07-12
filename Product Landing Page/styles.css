@@ -121,44 +121,67 @@ input[type="email"]{
     padding-bottom: 20px;
 }
 
-#Pricing{
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-#deck{
+#pricing {
+    margin-top: 60px;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 10px;
-    row-gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
 }
-
-.cards{
-    border: 1px solid black;
+  
+.product {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1rem 1rem;
-    margin: 0 auto;
-    padding: 10px;
-    height: 300px;
-    min-width: 200px;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+  
+.product > .level {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+  
+.product > h2 {
+    margin-top: 15px;
+}
+  
+.product > ol {
+    list-style-type: none;
+    margin: 15px 0;
+}
+  
+.product > ol > li {
+    padding: 5px 0;
 }
 
+/* .level > input[type="submit"]{
+    font-weight: 200;
+    margin-bottom: 20px;
+    width: 100%;
+} */
 
-
-.select-btn{
-    width: 100px;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: rgb(240, 186, 10);
-    border: none;
-}
-
-.select-btn:hover{
+.product > button:hover {
     background-color: orange;
+    transition: background-color 1s;
+}
+  
+@media (max-width: 800px) {
+    #pricing {
+      flex-direction: column;
+    }
+    .product {
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
 }
 
 footer{
