@@ -7,6 +7,15 @@
     width: 55vw;
     max-width: 500px;
     max-height: 500px;
+    /* 👇🏻 this property is used to link @keyframes to the CSS selector */
+    animation-name: wheel;
+    /* 👇🏻 this property is used to set how the animation should sequence to complete */
+    animation-duration: 10s;
+    /* 👇🏻 this property sets how many times your animation should repeat */
+    animation-iteration-count: infinite;
+    /* 👇🏻 this property sets how the animations should progress over time */
+    /* here we want the animation to runa t the same rate from the start to finish i.e why we choose LINEAR!! */
+    animation-timing-function: linear;
 }
 
 .line{
@@ -50,4 +59,74 @@
     height: 20%;
     position: absolute;
     border: 2px solid;
+    /* this will set the origin point to be offset 50% from the left and 0% from the top */
+    transform-origin: 50% 0%;
+    /* this will set the animation-name, animation-duration, animation-timing-function, and animation-iteration-count properties in that order. */
+    /* we can use the [animation[ property to set these all at once!! */
+    animation: cabins 10s ease-in-out infinite;
+    /* 👆🏻 to make your cabin animation seem more like a natural swinging motion, i.e we use [ease-in-out] timing function, this setting will tell the animation to start and end at a slower pace, but move more quickly in the middle of the cycle!! */
+}
+
+.cabin:nth-of-type(1){
+    right: -8.5%;
+    top: 50%;
+}
+
+.cabin:nth-of-type(2){
+    right: 17%;
+    top: 93.5%;
+}
+
+.cabin:nth-of-type(3){
+    right: 67%;
+    top: 93.5%;
+}
+
+.cabin:nth-of-type(4){
+    left: -8.5%;
+    top: 50%;
+}
+
+.cabin:nth-of-type(5){
+    left: 17%;
+    top: 7%;
+}
+
+.cabin:nth-of-type(6){
+    right: 17%;
+    top: 7%;
+}
+
+/* Once you have defined the `@keyframes` rule, you can apply the animation to an element using the `animation` property or shorthand `animation` property. */
+@keyframes wheel{
+    /* this will start with no rotation!! */
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cabins{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        background-color: yellow;
+    }
+
+    50%{
+        background-color: purple;
+    }
+
+    75%{
+        background-color: yellow;
+    }
+
+    100%{
+        transform: rotate(-360deg);
+    }
 }
