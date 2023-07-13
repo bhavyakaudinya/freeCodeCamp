@@ -7,3 +7,10 @@ body{
     /* Removing both the horizontal and vertical scrollbars using 👇🏻 */
     overflow: hidden;
 }
+
+.ground{
+    /* to take up the full width of the viewport!! */
+    width: 100vw;
+    height: 400px;
+    background: linear-gradient(90deg, rgb(88, 175. 236), rgb(182, 255, 255));
+}
