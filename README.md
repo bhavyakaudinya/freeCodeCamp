@@ -53,7 +53,9 @@ I hope this helps!
 
 || [Magazine](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Magazine) ||
 
-|| [Nutrition Label](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Nutrition%20Label)
+|| [Nutrition Label](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Nutrition%20Label) ||
+
+|| [Penguin](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Penguin) ||
 
 || [Picasso Painting](https://github.com/bhavyakaudinya/freeCodeCamp/tree/master/Picasso%20Painting) ||
 
