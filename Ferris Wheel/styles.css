@@ -7,6 +7,15 @@
     width: 55vw;
     max-width: 500px;
     max-height: 500px;
+    /* 👇🏻 this property is used to link @keyframes to the CSS selector */
+    animation-name: wheel;
+    /* 👇🏻 this property is used to set how the animation should sequence to complete */
+    animation-duration: 10s;
+    /* 👇🏻 this property sets how many times your animation should repeat */
+    animation-iteration-count: infinite;
+    /* 👇🏻 this property sets how the animations should progress over time */
+    /* here we want the animation to runa t the same rate from the start to finish i.e why we choose LINEAR!! */
+    animation-timing-function: linear;
 }
 
 .line{
@@ -83,3 +92,16 @@
     right: 17%;
     top: 7%;
 }
+
+/* Once you have defined the `@keyframes` rule, you can apply the animation to an element using the `animation` property or shorthand `animation` property. */
+@keyframes wheel{
+    /* this will start with no rotation!! */
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
