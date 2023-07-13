@@ -7,3 +7,81 @@ body{
     /* Removing both the horizontal and vertical scrollbars using 👇🏻 */
     overflow: hidden;
 }
+
+.left-mountain{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+    position: absolute;
+    /* Skew transformation function is used to distort an element by tilting it along the horizontal and vertiacal axis.. */
+    transform: skew(0deg, 44deg);
+    /* setting it like as this comes directly under the .ground element  */
+    z-index: 2;
+    margin-top: 100px;
+}
+
+.back-mountain{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+    /* to prevent it from taking up space in the page layout */
+    position: absolute;
+    z-index: 1;
+    /* by default tranform property rotate element in clockwise direction */
+    transform: rotate(45deg);
+    left: 110px;
+    top: 225px;
+}
+
+.sun{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    /* again to prevent from taking */
+    position: absolute;
+    border-radius: 50%;
+    /* Positioning the sun in such a way that the top right corner of the screen such that 75px pf its top and right edges are off screen!! */
+    right: -75px;
+    top: -75px;
+}
+
+.penguin{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 75px;
+    /* Setting it up as it appears in front of the [.ground] element!! */
+    z-index: 4;
+    position: relative;
+}
+
+.penguin-head{
+    /* setting this exactly half of it's parent!!! */
+    width: 50%;
+    height: 45%;
+    background: linear-gradient(45deg, gray, rgb(239, 240, 228));
+    border-top-left-radius: 70%;
+    border-top-right-radius: 70%;
+    border-bottom-left-radius: 65%;
+    border-bottom-right-radius: 65%;
+}
+
+.penguin-body{
+    width: 53%;
+    height: 45%;
+    background: linear-gradient(45deg, rgb(134, 133, 133) 0%, rgb(234, 231, 231) 25%, white 67%);
+}
+
+.ground{
+    /* to take up the full width of the viewport!! */
+    width: 100vw;
+    height: 400px;
+    background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+    /* this will gonna stack upon top of the elements having lower Z-index!! */
+    z-index: 3;
+    position: absolute;
+    margin-top: -58px;
+}
+
+
+
