@@ -61,10 +61,20 @@ body{
     width: 50%;
     height: 45%;
     background: linear-gradient(45deg, gray, rgb(239, 240, 228));
-    border-top-left-radius: 70%;
+
+    /* border-radius: top-left top-right bottom-right bottom-left; */
+    border-radius: 70% 70% 65% 65%;
+
+    /* instead of writing code as given below try writing as it is depicted above!! */
+    /* border-top-left-radius: 70%;
     border-top-right-radius: 70%;
     border-bottom-left-radius: 65%;
-    border-bottom-right-radius: 65%;
+    border-bottom-right-radius: 65%; */
+
+    top: 10%;
+    left: 25%;
+    /* it's value has been set to 1 because we need our penguin head to appear before the penguin-body element!! */
+    z-index: 1;
 }
 
 .penguin-body{
@@ -74,9 +84,11 @@ body{
     /* border-radius: top-left top-right bottom-right bottom-left; */
     /* 👆🏻👇🏻 */
     border-radius: 80% 80% 100% 100%;
+    top: 40%;
+    left: 23.5%;
 }
 
-/* 👇🏻 Target all descendent elements of the .penguin element */
+/* 👇🏻 for Targeting all descendent elements of the [.penguin] element */
 .penguin *{
     position: absolute;
 }
