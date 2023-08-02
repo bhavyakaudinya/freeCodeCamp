@@ -91,12 +91,23 @@ body{
 /* To give the penguin body a crest, we are creating a pseudo-element that is the first child of the .penguin-body element. Set the content property of the pseudo-element to an empty string. */
 .penguin-body::before{
     content: "";
+
     /* We've positioned this element relative to it's closest positioned ancestors.*/
     position: absolute;
-    /* setting width equal to the half of its parent */
+
+    /* 👇🏻 setting width equal to the half of its parent */
     width: 50%;
     height: 45%;
     background-color: gray;
+    top: 10%;
+    left: 25%;
+
+    /* border-radius: <top-left> <top-right> <bottom-right> <bottom-left>; */
+    /* here we have give the bottom-corners a 100% value and top-corners 0% value, rounding-off the bottom corners */
+    border-radius: 0% 0% 100% 100%;
+
+    /* this is used to set the transparancy of an element */
+    opacity: 70%;
 }
 
 
