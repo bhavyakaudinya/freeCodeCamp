@@ -88,6 +88,18 @@ body{
     left: 23.5%;
 }
 
+/* To give the penguin body a crest, we are creating a pseudo-element that is the first child of the .penguin-body element. Set the content property of the pseudo-element to an empty string. */
+.penguin-body::before{
+    content: "";
+    /* We've positioned this element relative to it's closest positioned ancestors.*/
+    position: absolute;
+    /* setting width equal to the half of its parent */
+    width: 50%;
+    height: 45%;
+    background-color: gray;
+}
+
+
 /* 👇🏻 for Targeting all descendent elements of the [.penguin] element */
 .penguin *{
     position: absolute;
