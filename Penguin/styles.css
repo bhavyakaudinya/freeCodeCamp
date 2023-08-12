@@ -1,6 +1,7 @@
 :root{
     /* here we creating a new custom variable because .face and .chin elements have the same background-color... */
     --penguin-face: white;
+    --penguin-picorna: orange;
 }
 
 body{
@@ -154,7 +155,7 @@ body{
 
 .beak{
     height: 10%;
-    background-color: orange;
+    background-color: var(--penguin-picorna);
     border-radius: 50%;
 }
 
@@ -173,17 +174,24 @@ body{
 }
 
 .shirt{
+    /* we can use font property to specify all the various font-related properties for a single element in a single declarations.  */
+    /* font: bold 25px Helvetica, sans-serif; */
     font-size: 25px;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
+    top: 165px;
+    left: 127.5px;
+    /* increasing the stack so that it appears before the .penguin-body */
+    z-index: 1;
+    color: #6a6969;
 }
 
 .shirt > div{
     /* we can either use Normal or Initial in this case to revert back to its original position */
     font-weight: normal;
     /* font-weight: initial; */
-    top: 22.5%;
-    left: 12%;
+    top: 22.5px;
+    left: 12px;
 }
 
 .penguin-body{
@@ -219,6 +227,22 @@ body{
     opacity: 70%;
 }
 
+
+.foot{
+    width: 15%;
+    height: 30%;
+    background-color: var(--penguin-picorna);
+    top: 85%;
+    border-radius: 50%;
+}
+
+.foot.left{
+    left: 25%;
+}
+
+.foot.right{
+    right: 25%;
+}
 
 /* 👇🏻 for Targeting all descendent elements of the [.penguin] element */
 .penguin *{
