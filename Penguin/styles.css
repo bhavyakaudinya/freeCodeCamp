@@ -2,6 +2,7 @@
     /* here we creating a new custom variable because .face and .chin elements have the same background-color... */
     --penguin-face: white;
     --penguin-picorna: orange;
+    --penguin-skin: gray;
 }
 
 body{
@@ -66,7 +67,7 @@ body{
     /* setting this exactly half of it's parent!!! */
     width: 50%;
     height: 45%;
-    background: linear-gradient(45deg, gray, rgb(239, 240, 228));
+    background: linear-gradient(45deg, var(--penguin-skin), rgb(239, 240, 228));
 
     /* border-radius: top-left top-right bottom-right bottom-left; */
     border-radius: 70% 70% 65% 65%;
@@ -215,7 +216,7 @@ body{
     /* 👇🏻 setting width equal to the half of its parent */
     width: 50%;
     height: 45%;
-    background-color: gray;
+    background-color: var(--penguin-skin);
     top: 10%;
     left: 25%;
 
@@ -227,6 +228,22 @@ body{
     opacity: 70%;
 }
 
+.arm{
+    width: 30%;
+    height: 60%;
+    /* the default direction for using a linear gradient function is in COLOCKWISE direction */
+    background: linear-gradient(90deg, var(--penguin-skin), rgb(209, 210, 199));
+}
+
+.arm.left{
+    top: 35%;
+    left: 5%;
+}
+
+.arm.right{
+    top: 0%;
+    right: -5%;
+}
 
 .foot{
     width: 15%;
@@ -234,14 +251,20 @@ body{
     background-color: var(--penguin-picorna);
     top: 85%;
     border-radius: 50%;
+    /* changing the stacking of .foot elements such that it appears beneath the .penguin-body */
+    z-index: -1;
 }
 
 .foot.left{
     left: 25%;
+    /* this will rotate the left foot 80 degrees in the anti-clockwise direction */
+    transform: rotate(80deg);
 }
 
 .foot.right{
     right: 25%;
+    /* this will rotate the right foot by 80 degrees in clockwise direction */
+    transform: rotate(-80deg);
 }
 
 /* 👇🏻 for Targeting all descendent elements of the [.penguin] element */
