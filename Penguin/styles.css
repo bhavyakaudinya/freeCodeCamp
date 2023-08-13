@@ -5,6 +5,22 @@
     --penguin-skin: gray;
 }
 
+@keyframes wave{
+    10%{
+        /* here we are rotating the left arm by 110deg while retaining the scaling of the left arm */
+        transform: rotate(110deg) scaleX(-1);
+    }
+    20%{
+        transform: rotate(130deg) scaleX(-1);
+    }
+    30%{
+        transform: rotate(110deg) scaleX(-1);
+    }
+    40%{
+        transform: rotate(130deg) scaleX(-1);
+    }
+}
+
 body{
     background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
     margin: 0;
@@ -61,6 +77,21 @@ body{
     /* Setting it up as it appears in front of the [.ground] element!! */
     z-index: 4;
     position: relative;
+
+    /* element {
+  transition: property duration timing-function delay; 
+   } */
+    transition: 1s ease-in-out 0ms;
+}
+
+/* we're taregting the .penguin when it's active, and increasing its size by 50% in both direction */
+.penguin:active{
+    /* this property works when we hove or click the desired element */
+    transform: scale(1.5);
+    /* 👇🏻 When you activate the .penguin element, it might look as though you can drag it around. 
+    but This is not true. */
+    /* to overcome this situation we have set the cursor property to not-allowed */
+    cursor: not-allowed;
 }
 
 .penguin-head{
@@ -232,17 +263,38 @@ body{
     width: 30%;
     height: 60%;
     /* the default direction for using a linear gradient function is in COLOCKWISE direction */
-    background: linear-gradient(90deg, var(--penguin-skin), rgb(209, 210, 199));
+    background: linear-gradient(
+        90deg, 
+        var(--penguin-skin), 
+        rgb(209, 210, 199)
+        );
+    border-radius: 30% 30% 30% 120%;
+    z-index: -1;
 }
 
 .arm.left{
     top: 35%;
     left: 5%;
+
+    /* 👇🏻 this property allows you to specify the point around which a transformation is preferred  */
+    /* here we are altering the origin of the transform function to be the top left corner of its parent */
+    transform-origin: top left;
+
+    /* 👇🏻 this is done to keep the linear gradient on the correct side of the penguin's left arm... */
+    transform: rotate(130deg) scaleX(-1);
+    /* ☝🏻 The `scaleX()` function scales an element horizontally, and by setting it to `-1`, you can effectively invert the x-axis */
+
+    /* .element {
+  animation: animationName duration timing-function delay iteration-count direction fill-mode; } */
+    animation: wave 3s linear infinite;
+    /* ☝🏻 in above line we have set the animation to wave which we defined earlier using @keyframes, setting the time duration to 3 seconds or 3s, having a linear timing-function, and iteration-count to infinite.. */
 }
 
 .arm.right{
     top: 0%;
     right: -5%;
+    /* 👇🏻 rotating the right arm by 45deg anti-clockwise */
+    transform: rotate(-45deg);
 }
 
 .foot{
@@ -275,7 +327,10 @@ body{
 .ground{
     /* to take up the full width of the viewport!! */
     width: 100vw;
-    height: 400px;
+
+    /*  In order for the calc() function to work, you need to have spaces around the dash or plus sign. */
+    height: calc(100vh - 300px);
+    
     background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
 
     /* this will gonna stack upon top of the elements having lower Z-index!! */
