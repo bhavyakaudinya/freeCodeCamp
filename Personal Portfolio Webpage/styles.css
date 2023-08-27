@@ -26,10 +26,27 @@ ul > li{
 }
 
 li:hover{
-    background-color: red;
+    background-color: rgb(55, 81, 196);
 }
 
 a{
     color: black;
     text-decoration: none;
 }
+
+#welcome-section{
+    /* border: 1px solid red; */
+    margin: 10px;
+}
+
+#welcome-section h1{
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+#welcome-section h3{
+    margin: 10px;
+    text-align: center;
+    /* border: 1px solid green; */
+}
+
