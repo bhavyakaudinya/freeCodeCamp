@@ -1,10 +1,11 @@
 :root{
     --nav-bar: red;
+    --nav-link: white;
 }
 
 *{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Montserrat, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -26,12 +27,15 @@ ul > li{
 }
 
 li:hover{
-    background-color: rgb(55, 81, 196);
+    background-color: rgb(79, 105, 224);
 }
 
-a{
+#nav-list a{
     color: black;
     text-decoration: none;
+    color: var(--nav-link);
+    font-size: larger;
+    font-weight: 700;
 }
 
 #welcome-section{
