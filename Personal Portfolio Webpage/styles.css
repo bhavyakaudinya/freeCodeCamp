@@ -41,16 +41,22 @@ li:hover{
 #welcome-section{
     /* border: 1px solid red; */
     margin: 10px;
+    padding: 24rem 0 24rem 0; /* top, right, bottom, left */
+    /* border: 2px solid blue; */
 }
 
 #welcome-section h1{
     text-align: center;
     /* border: 1px solid black; */
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: rgb(119, 117, 117);
 }
 
 #welcome-section h3{
     margin: 10px;
     text-align: center;
     /* border: 1px solid green; */
+    color: var(--nav-bar);
+    font-size: x-large;
 }
-
