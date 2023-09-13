@@ -72,3 +72,20 @@ li:hover{
 .projects-section-header{
     text-align: center;
 }
+
+#contact{
+    padding: 24rem 0 0 0;
+}
+
+.contact-section-header, .contact-links{
+    text-align: center;
+}
+
+.contact-links{
+    padding: 8px 0 8px 0;
+}
+
+.contact-links a{
+    text-decoration: none;
+    color: black;
+}
