@@ -13,9 +13,13 @@
 #navbar{
     background-color: rgb(221, 55, 55);
     margin: 5px;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
 }
 
 #nav-list{
+    /* position: fixed; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -59,4 +63,12 @@ li:hover{
     /* border: 1px solid green; */
     color: var(--nav-bar);
     font-size: x-large;
+}
+
+#projects{
+    padding: 24rem 0 24rem 0;
+}
+
+.projects-section-header{
+    text-align: center;
 }
