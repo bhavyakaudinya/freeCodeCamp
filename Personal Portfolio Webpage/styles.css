@@ -1,6 +1,7 @@
 :root{
     --nav-bar: red;
     --nav-link: white;
+    --footer-color: #a3a19b;
 }
 
 *{
@@ -106,4 +107,5 @@ footer{
     display: flex;
     text-align: center;
     justify-content: center;
+    background-color: var(--footer-color);
 }
