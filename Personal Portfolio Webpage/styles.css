@@ -1,6 +1,7 @@
 :root{
     --nav-bar: red;
     --nav-link: white;
+    --footer-color: #a3a19b;
 }
 
 *{
@@ -12,10 +13,14 @@
 
 #navbar{
     background-color: rgb(221, 55, 55);
-    margin: 5px;
+    /* margin: 5px; */
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
 }
 
 #nav-list{
+    /* position: fixed; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -35,22 +40,72 @@ li:hover{
     text-decoration: none;
     color: var(--nav-link);
     font-size: larger;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #welcome-section{
     /* border: 1px solid red; */
-    margin: 10px;
+    /* margin: 10px; */
+    padding: 24rem 0 24rem 0; /* top, right, bottom, left */
+    /* border: 2px solid blue; */
+    background: rgb(15, 15, 15);
 }
 
 #welcome-section h1{
     text-align: center;
     /* border: 1px solid black; */
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: rgb(119, 117, 117);
 }
 
 #welcome-section h3{
-    margin: 10px;
+    /* margin: 10px; */
     text-align: center;
     /* border: 1px solid green; */
+    color: var(--nav-bar);
+    font-size: x-large;
 }
 
+#projects{
+    padding: 24rem 0 24rem 0;
+    background-color: aquamarine;
+}
+
+.projects-section-header{
+    text-align: center;
+}
+
+#contact{
+    padding: 12rem 0 12rem 0;
+    background-color: aqua;
+}
+
+.contact-section-header, .contact-links{
+    text-align: center;
+}
+
+.contact-header{
+    font-size: 2rem;
+}
+
+.contact-header-caption{
+    font-size: 1rem;
+}
+
+.contact-links{
+    padding: 1.5rem 0 1.5rem 0;
+    font-size: larger;
+}
+
+.contact-links a{
+    text-decoration: none;
+    color: black;
+}
+
+footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--footer-color);
+}
