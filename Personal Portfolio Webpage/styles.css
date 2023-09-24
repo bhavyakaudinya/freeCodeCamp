@@ -12,7 +12,7 @@
 }
 
 #navbar{
-    background-color: rgb(221, 55, 55);
+    background-color: rgb(219, 47, 47);
     width: 100%;
     /* margin: 5px; */
     /* display: flex;
@@ -35,7 +35,7 @@ ul > li{
 }
 
 li:hover{
-    background-color: rgb(79, 105, 224);
+    background-color: rgb(92, 117, 230);
 }
 
 #nav-list a{
@@ -81,6 +81,23 @@ li:hover{
     text-align: center;
 }
 
+.project-tile{
+    margin: 2rem;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+.project-tile > a{
+    text-decoration: none;
+    color: black;
+}
+
 #contact{
     padding: 12rem 0 12rem 0;
     background-color: aqua;
@@ -114,4 +131,8 @@ footer{
     text-align: center;
     justify-content: center;
     background-color: var(--footer-color);
+}
+
+@media(max-width: 600px){
+    
 }
