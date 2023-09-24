@@ -12,11 +12,14 @@
 }
 
 #navbar{
-    background-color: rgb(221, 55, 55);
+    background-color: rgb(219, 47, 47);
+    width: 100%;
     /* margin: 5px; */
     /* display: flex;
     justify-content: flex-end;
     align-items: center; */
+    position: fixed;
+    border-radius: 1rem;
 }
 
 #nav-list{
@@ -32,14 +35,14 @@ ul > li{
 }
 
 li:hover{
-    background-color: rgb(79, 105, 224);
+    background-color: rgb(92, 117, 230);
 }
 
 #nav-list a{
     color: black;
     text-decoration: none;
     color: var(--nav-link);
-    font-size: larger;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -49,6 +52,7 @@ li:hover{
     padding: 24rem 0 24rem 0; /* top, right, bottom, left */
     /* border: 2px solid blue; */
     background: rgb(15, 15, 15);
+    margin-bottom: 1px;
 }
 
 #welcome-section h1{
@@ -70,15 +74,34 @@ li:hover{
 #projects{
     padding: 24rem 0 24rem 0;
     background-color: aquamarine;
+    margin-bottom: 1px;
 }
 
 .projects-section-header{
     text-align: center;
 }
 
+.project-tile{
+    margin: 2rem;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+.project-tile > a{
+    text-decoration: none;
+    color: black;
+}
+
 #contact{
     padding: 12rem 0 12rem 0;
     background-color: aqua;
+    margin-bottom: 1px;
 }
 
 .contact-section-header, .contact-links{
@@ -108,4 +131,10 @@ footer{
     text-align: center;
     justify-content: center;
     background-color: var(--footer-color);
+}
+
+@media(max-width: 600px){
+    #project{
+        background-color: burlywood;
+    }
 }
