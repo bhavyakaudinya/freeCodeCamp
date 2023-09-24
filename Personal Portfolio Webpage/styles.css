@@ -134,5 +134,7 @@ footer{
 }
 
 @media(max-width: 600px){
-    
+    #project{
+        background-color: burlywood;
+    }
 }
